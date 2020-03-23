@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>MoSP presentation</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">MoSP presentation</h1>
+</div>
+<div id="mosp-presentation" class="slide section level1">
+<h1>MoSP presentation</h1>
+<p>Generating backdoored EC curves</p>
+</div>
+<div id="project-description" class="slide section level1">
+<h1>Project description</h1>
+<ul>
+<li>EC cryptography is all over the place</li>
+<li>There are reasonable doubts about “verified-ness” of several named NIST curves</li>
+<li>Let’s try to build a parametrized curve generator!</li>
+</ul>
+</div>
+<div id="ec-quick-intro" class="slide section level1">
+<h1>EC quick intro</h1>
+<p><br /><span class="math display"><em>y</em><sup>2</sup> = <em>x</em><sup>3</sup> + <em>a</em><em>x</em> + <em>b</em></span><br /></p>
+<p><code>$$ x, y \in \mathbb{F}_p \text{ or } x, y \in \mathbb{F}_{2^p} $$</code></p>
+</div>
+<div id="project-goal" class="slide section level1">
+<h1>Project goal</h1>
+<ul>
+<li>Build a EC parameter generation tool, which would produce parameters that are:
+<ul>
+<li>Statistically indistinguishable from “normal” parameters</li>
+<li>Allow for relative ease of “cracking” (which can mean decrypting, signing, etc.)</li>
+</ul></li>
+</ul>
+</div>
+<div id="planned-tasks" class="slide section level1">
+<h1>Planned tasks</h1>
+<ul>
+<li>Build a simple degenerate curve</li>
+<li>Try to brute-crack it</li>
+<li>Build a more complex weak curve</li>
+<li>Also crack it</li>
+<li>Combine multiple approaches to allow for a final complex curve</li>
+<li>Review the practical implications</li>
+</ul>
+</div>
+<div id="methodology" class="slide section level1">
+<h1>Methodology</h1>
+<ul>
+<li>There are a plethora of well-known methods to achieve the goal</li>
+<li>It’s just that there are no implementations</li>
+<li>So, the general plan for each subtask is:
+<ul>
+<li>Find a paper</li>
+<li>Try to implement it manually</li>
+</ul></li>
+</ul>
+</div>
+<div id="already-implemented" class="slide section level1">
+<h1>Already implemented</h1>
+<ul>
+<li>Build a simple degenerate curve</li>
+<li>Try to brute-crack it</li>
+<li><span class="gray">Build a more complex weak curve</span></li>
+<li><span class="gray">Also crack it</span></li>
+<li><span class="gray">Combine multiple approaches to allow for a final complex curve</span></li>
+<li><span class="gray">Review the practical implications</span></li>
+</ul>
+</div>
+<div id="problems" class="slide section level1">
+<h1>Problems</h1>
+<ul>
+<li>Why so slow?</li>
+<li>The problem is lack of actual tooling to do that</li>
+<li>The only actually good API - OpenSSL</li>
+<li>OpenSSL uses C</li>
+<li>C is hard sometimes</li>
+</ul>
+</div>
+<div id="thanks-for-attention" class="slide section level1">
+<h1>Thanks for attention</h1>
+</div>
+</body>
+</html>

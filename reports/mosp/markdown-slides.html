@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Helvetica'; }
+      h1, h2, h3 {
+        font-family: 'Helvetica';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code {
+          font-family: 'Ubuntu Mono';
+          font-size: 30px; 
+      }
+
+      .remark-inline-code {
+          background: #dddddd;
+          border: 4px solid #dddddd;
+          border-radius: 4px;
+      }
+
+      .remark-slide-content { font-size: 30px; vertical-align: middle; }
+
+      .pic img {
+          height: 85%;
+          position: absolute;
+          top: 7.5%;
+          text-align: center;
+          left: 50%;
+          transform: translate(-50%, 0);
+      }
+
+      .widepic img {
+          width: 98%;
+          position: absolute;
+          left: 1%;
+          text-align: center;
+          top: 50%;
+          transform: translate(0, -50%);
+      }
+
+      .red {
+        color: red;
+      }
+      .gray {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"></script>
+    <script>
+        var slideshow = remark.create({
+            sourceUrl: "slides.md"
+        });
+
+        MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+        });
+
+        MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
