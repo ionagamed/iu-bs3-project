@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="shell-command" section="Util" mimetype="" version="5" kateversion="2.4">
+  <highlighting>
+    <contexts>
+      <context name="plaintext" attribute="Plaintext" lineEndContext="#stay">
+        <DetectChar attribute="command" context="Command" char="$" />
+      </context>
+      <context name="Command" attribute="Command" lineEndContext="#pop">
+
+      </context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Command" defStyleNum="dsKeyword" />
+    </itemDatas>
+  </highlighting>
+</language>
